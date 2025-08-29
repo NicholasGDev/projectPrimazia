@@ -1,0 +1,231 @@
+/* --- Adicionado do <style scoped> do Header.vue --- */
+
+/*
+  Estilos do header principal da aplicação
+  Inclui barra superior, logo, navegação, dropdowns e links
+*/
+/* Header fixo no topo da página, com cor de fundo azul escuro e sombra */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background: #223a6d; /* Fundo igual ao header */
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+/* Espaço reservado para o logo, quadrado preto à esquerda */
+.logo-placeholder {
+  width: 56px;
+  height: 56px;
+  background: #111;
+  border-radius: 8px;
+  margin-left: 32px;
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Container flexível para a barra de navegação */
+.nav-bar {
+  flex: 1;
+}
+/* Lista de navegação principal, horizontal e sem marcadores */
+.nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+/* Item individual da lista de navegação */
+.nav-bar li {
+  margin: 0;
+}
+/* Link principal do menu de navegação */
+.nav-bar a {
+  color: var(--primazia-text, #223a6d);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.1em;
+}
+/* Link ativo (página atual) na navegação principal: igual ao hover do dropdown */
+.nav-bar a.router-link-exact-active {
+  background: #fff;
+  color: #223a6d;
+  border-radius: 6px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  box-sizing: border-box;
+}
+/* Efeito hover nos links principais do menu */
+.nav-bar a:hover {
+  background: #fff;
+  color: #223a6d;
+  border-radius: 6px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  box-sizing: border-box;
+}
+/* Container do dropdown, posiciona o menu relativo ao botão */
+.dropdown {
+  position: relative;
+}
+/* Label do dropdown (botão que abre o menu) */
+.dropdown-label {
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, color 0.2s;
+}
+/* Label do dropdown quando o menu está aberto ou selecionado: igual ao link selecionado do header, largura igual */
+.dropdown.open > .dropdown-label,
+.dropdown.selected > .dropdown-label {
+  background: #fff;
+  color: #223a6d;
+  border-radius: 6px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  box-sizing: border-box;
+}
+/* Hover no label do dropdown aberto */
+.dropdown.open > .dropdown-label:hover {
+  color: #223a6d;
+}
+/* Menu do dropdown, lista de opções exibida ao abrir */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #223a6d;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 220px;
+    z-index: 10;
+    padding: 0.5em 0;
+    border: 2px solid #223a6d;
+  }
+/* Item da lista do dropdown, ocupa toda a largura do menu */
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* Link dentro do dropdown, estilizado para ocupar toda a linha */
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 220px;
+  box-sizing: border-box;
+  padding: 0.5em 1.2em;
+  color: #fff; /* Texto branco no dropdown */
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+}
+/* Link ativo ou hover dentro do dropdown, muda cor de fundo e texto */
+/* Hover ou ativo: fundo branco, texto azul escuro igual ao header */
+.dropdown-menu a.router-link-exact-active,
+.dropdown-menu a.router-link-active,
+.dropdown-menu a:hover {
+  background: #fff;
+  color: #223a6d;
+}
+/* Estilo geral para o elemento nav, espaçamento interno */
+nav {
+  padding: 1em;
+}
+/* Estilo geral para listas não ordenadas, horizontal e sem marcadores */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Estilo geral para itens de lista, remove margens */
+li {
+  margin: 0;
+}
+/* Estilo geral para links, cor padrão e transição */
+a {
+  color: var(--primazia-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+/* Link ativo global (fora do header), cor dourada */
+a.router-link-exact-active {
+  color: #ffd700;
+}
+/* Hover global em links, muda cor para azul escuro */
+a:hover {
+  color: var(--primazia-dark);
+}
+/* Container do dropdown (duplicado, usado em escopos diferentes) */
+.dropdown {
+  position: relative;
+}
+/* Label do dropdown (duplicado, usado em escopos diferentes) */
+.dropdown-label {
+  color: var(--primazia-text);
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+/* Menu do dropdown (duplicado, usado em escopos diferentes) */
+/* Menu do dropdown (duplicado, usado em escopos diferentes) */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #223a6d;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 220px;
+  z-index: 10;
+}
+/* Item do menu dropdown (duplicado, usado em escopos diferentes) */
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+/* Link do menu dropdown (duplicado, usado em escopos diferentes) */
+/* Link do menu dropdown (duplicado, usado em escopos diferentes) */
+.dropdown-menu a {
+  display: block;
+  padding: 0.5em 1.2em;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+/* Hover do link do menu dropdown (duplicado, usado em escopos diferentes) */
+/* Hover do link do menu dropdown (duplicado, usado em escopos diferentes) */
+.dropdown-menu a:hover {
+  background: #fff;
+  color: #223a6d;
+}

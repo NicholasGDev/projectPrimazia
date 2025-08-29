@@ -1,0 +1,73 @@
+/* Footer com padrão de cor igual ao header (#223a6d) e layout inspirado na imagem fornecida */
+/* Footer ocupa toda a largura da tela */
+/* Footer ocupa toda a largura da tela sem criar overflow */
+/* Footer fixo igual ao header, largura total da tela, colado embaixo */
+.main-footer {
+  background: #223a6d;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-top: 18px;
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2em;
+}
+.footer-icon {
+  font-size: 1.5em;
+}
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  color: #bfc8e6;
+  margin-top: 16px;
+}
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .footer-title {
+    font-size: 2em;
+  }
+}
