@@ -1,6 +1,72 @@
-h1 {
-  color: #2c3e50;
+.html, body {
+  /* Remove margens e paddings padrão do navegador, garante largura total da tela e evita scroll horizontal */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
-p {
-  color: #34495e;
+.home-hero-root {
+  /* Container principal da home, ocupa toda a largura da tela */
+  width: 100vw;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.home-hero-bg {
+  /* Fundo da home, imagem fixa no topo, ocupa toda a largura, centraliza conteúdo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  min-width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/primaziaMainHomePicture.png') center center/cover no-repeat;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 98;
+  box-sizing: border-box;
+}
+.home-hero-bg::before {
+  /* Sobreposição escura e levemente desfocada sobre a imagem de fundo para dar contraste ao texto */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 20, 0.65);
+  backdrop-filter: blur(2.5px);
+  z-index: 1;
+}
+.home-hero-content {
+  /* Container do texto, garante que fique acima do fundo, alinhado à esquerda e centralizado verticalmente */
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: #fff;
+  max-width: 600px;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-hero-content h1 {
+  /* Título principal, tamanho grande, espaçamento inferior, cor branca */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.home-hero-content p {
+  /* Parágrafo de descrição, tamanho médio, cor branca */
+  font-size: 1.3rem;
+  color: #fff;
 }
