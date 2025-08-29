@@ -1,3 +1,10 @@
+/* RESET BÁSICO PARA REMOVER MARGENS E PREENCHIMENTOS PADRÃO */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Garante que nada transborde na horizontal */
+}
+
 /* --- Adicionado do <style scoped> do Header.vue --- */
 
 /*
@@ -9,7 +16,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%; /* ALTERADO: Use 100% para evitar transbordamento */
   height: 70px;
   background: #223a6d; /* Fundo igual ao header */
   display: flex;
@@ -228,4 +235,64 @@ a:hover {
 .dropdown-menu a:hover {
   background: #fff;
   color: #223a6d;
+}
+
+/* Estilos para dispositivos móveis
+  (Smartphones e telas pequenas, até 768px de largura)
+*/
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .logo-placeholder {
+    margin: 10px auto;
+  }
+  
+  .nav-bar {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .nav-bar li,
+  .dropdown {
+    width: 100%;
+  }
+  
+  .nav-bar a,
+  .dropdown-label,
+  .nav-bar a.router-link-exact-active,
+  .nav-bar a:hover {
+    min-width: unset;
+    padding: 1em;
+    border-radius: 0;
+  }
+  
+  .dropdown {
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+  }
+  
+  .dropdown-menu a {
+    min-width: unset;
+    width: 100%;
+    text-align: center;
+    padding: 1em 1.2em;
+  }
 }
