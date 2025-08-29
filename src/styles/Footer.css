@@ -1,3 +1,19 @@
+/* Definições para o corpo do site */
+body {
+  margin: 0;
+  padding: 0;
+  /* Garante que o body seja o contexto para o rodapé */
+  position: relative;
+  /* Define uma altura mínima, para que o footer fique na parte inferior mesmo em páginas com pouco conteúdo */
+  min-height: 100vh;
+}
+
+/* O conteúdo principal do site deve ficar dentro de um contêiner */
+.main-content-container {
+  /* Adiciona um preenchimento inferior para evitar que o rodapé sobreponha o conteúdo */
+  padding-bottom: 250px; /* Ajuste este valor para a altura exata do seu footer */
+}
+
 /* Footer com padrão de cor igual ao header (#223a6d) e layout inspirado na imagem fornecida */
 /* Footer ocupa toda a largura da tela */
 /* Footer ocupa toda a largura da tela sem criar overflow */
@@ -5,11 +21,13 @@
 .main-footer {
   background: #223a6d;
   color: #fff;
-  padding: 40px 0 20px 0;
-  width: 100vw;
-  position: fixed;
+  /* 100% é mais seguro para evitar overflow horizontal do que 100vw */
+  width: 100%;
+  /* Posiciona o footer em relação ao elemento pai com position: relative, que agora é o body */
+  position: absolute;
   left: 0;
   right: 0;
+  /* Posiciona o footer no final da página */
   bottom: 0;
   z-index: 99;
   display: flex;
@@ -52,7 +70,8 @@
   font-size: 1.2em;
 }
 .footer-icon {
-  font-size: 1.5em;
+  width: 20px;
+  height: 20px;
 }
 .footer-bottom {
   width: 100%;

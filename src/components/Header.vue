@@ -4,7 +4,6 @@
     <nav class="nav-bar">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/sobre">Sobre</router-link></li>
         <li class="dropdown" :class="{ open: showDropdown, selected: isServicosSelected }" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
           <span class="dropdown-label">Serviços ▾</span>
           <ul v-if="showDropdown" class="dropdown-menu">

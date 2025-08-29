@@ -6,7 +6,7 @@
 */
 /* Header fixo no topo da página, com cor de fundo azul escuro e sombra */
 .main-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -21,7 +21,7 @@
 .logo-placeholder {
   width: 56px;
   height: 56px;
-  background: #111;
+  background: url('/assets/iconePrimazia.png') center center/cover no-repeat;
   border-radius: 8px;
   margin-left: 32px;
   margin-right: 32px;

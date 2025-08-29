@@ -5,16 +5,14 @@
         <span class="footer-title">PRIMAZIA CONTABILIDADE</span>
         <div class="footer-contact">
           <div class="footer-contact-item">
-            <span class="footer-icon">📞</span>
-            <span class="footer-contact-text">11 91977-8988</span>
+            <span class="footer-contact-text">Contatos</span>
           </div>
           <div class="footer-contact-item">
-            <span class="footer-icon">📞</span>
-            <span class="footer-contact-text">11 91977-8988</span>
+            <img src="/assets/icons8-whatsapp.svg" alt="WhatsApp" class="footer-icon" />
+            <span class="footer-contact-text">WhatsApp - 11 91977-8988</span>
           </div>
           <div class="footer-contact-item">
-            <span class="footer-icon">📱</span>
-            <span class="footer-contact-text">WhatsApp</span>
+            <span class="footer-contact-text"> primazia.contabil@outlook.com</span>
           </div>
         </div>
       </div>
