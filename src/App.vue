@@ -2,7 +2,7 @@
 
 <template>
   <Header />
-  <div class="main-bg" style="padding-top: 70px; min-height: 100vh;">
+  <div class="main-bg">
     <router-view />
   </div>
   <Footer />

@@ -8,13 +8,8 @@ body {
   min-height: 100vh;
 }
 
-/* O conteúdo principal do site deve ficar dentro de um contêiner */
-.main-content-container {
-  /* Adiciona um preenchimento inferior para evitar que o rodapé sobreponha o conteúdo */
-  padding-bottom: 250px; /* Ajuste este valor para a altura exata do seu footer */
-}
 
-/* Footer com padrão de cor igual ao header (#223a6d) e layout inspirado na imagem fornecida */
+
 /* Footer ocupa toda a largura da tela */
 /* Footer ocupa toda a largura da tela sem criar overflow */
 /* Footer fixo igual ao header, largura total da tela, colado embaixo */
